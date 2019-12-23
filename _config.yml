@@ -1,0 +1,17 @@
+name: M∑овет
+description: >
+    M∑
+about: >
+    Непопулярный подкаст о науке и всякой херне вокруг
+master_repo: false
+url: "https://nla.skoltech.ru/msovet"
+markdown: kramdown
+highlighter: rouge
+future: true
+
+plugins: ['jekyll-paginate', 'jekyll-gist', 'jekyll-feed']
+
+paginate: 4
+
+logo:             logo.png
+disqus_shortname:
