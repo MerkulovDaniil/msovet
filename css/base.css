@@ -32,7 +32,7 @@ a img{ border:none; }
 
 body {
   font-family: 'Noto Serif', serif;
-  font-size: 14.5px;
+  font-size: 17px;
   color: #333;
   text-shadow: 0 1px 0 rgba(255,255,255,1.0);
 }
@@ -602,4 +602,42 @@ code.html span.doctype {
 }
 .pcast-player .pcast-download:hover, .pcast-player .pcast-download:focus {
   color: #666;
+}
+
+/*----------------------------------------------------------------------------
+  Button's width
+----------------------------------------------------------------------------*/
+
+img[src*="#button"] {
+  display: inline-block;
+  width: 200px;
+  height: auto;
+}
+
+/*----------------------------------------------------------------------------
+  Rounded images
+----------------------------------------------------------------------------*/
+
+.iconbox {
+    padding: 25px;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    max-width: 1024px;
+    height: auto;
+}
+.iconbox > div {
+    text-align: center;
+    width: 175px;
+    float: left;
+}
+.iconbox p {
+    margin: 25px;
+}
+
+.iconbox div img{
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
 }
