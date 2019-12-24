@@ -4,7 +4,7 @@ description: >
 about: >
     Непопулярный подкаст о науке и всякой херне вокруг
 master_repo: false
-url: "https://nla.skoltech.ru/msovet"
+url: "https://msovet.com"
 markdown: kramdown
 highlighter: rouge
 future: true
