@@ -3,10 +3,10 @@
     <a href="{{ site.url }}" class="top-link">{{ site.name }}</a>
       <ul class="nav">
         <!--Change the  URL here if working on an absolute domain-->
-        <li><a href="{{ '/' | prepend: site.baseurl }}">Эпизоды</a></li>
-        <li><a href="{{ '/subscribe' | prepend: site.baseurl }}">Подписка</a></li>
-        <li><a href="{{ '' | prepend: site.baseurl }}">Донаты</a></li>
-        <li><a href="{{ '/links' | prepend: site.baseurl }}">Ссылки</a></li>
+        <li><a href="{{ '/' | relative_url }}">Эпизоды</a></li>
+        <li><a href="{{ '/subscribe' | relative_url }}">Подписка</a></li>
+        <li><a href="{{ '' | relative_url }}">Донаты</a></li>
+        <li><a href="{{ '/links' | relative_url }}">Ссылки</a></li>
       </ul>
   </header>
 </div>
