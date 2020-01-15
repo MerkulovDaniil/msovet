@@ -62,7 +62,7 @@ strong {
 }
 
 a {
-  color: deepskyblue;
+  color: #2B8AC6;
   text-decoration: none;
 }
 a:hover {
@@ -134,7 +134,7 @@ ul.nav li {
   }
 }
 ul.nav li a {
-  color: deepskyblue;
+  color: #2B8AC6;
   margin-right: 10px;
   text-decoration: none;
   font-weight: 600;
@@ -188,7 +188,7 @@ ul.nav li.logo a {
 
 .listing .post h2 a {
   /* color: #2382c8; */
-  color: deepskyblue;
+  color: #2B8AC6;
   text-decoration: none;
   font-size: 30px;
   font-weight: 500;
@@ -213,7 +213,7 @@ ul.nav li.logo a {
   font-weight: lighter;
 }
 .listing .post.other h2 a {
-  color: deepskyblue;
+  color: #2B8AC6;
 }
 
 .listing .post.other h2 a:hover {

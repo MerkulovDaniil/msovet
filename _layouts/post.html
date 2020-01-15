@@ -9,8 +9,57 @@ layout: default
 {{ content }}
 </div>
 
+<div id="example{{page.number}}"></div>
+<script src="https://cdn.podlove.org/web-player/embed.js"></script>
+<script>
+    podlovePlayer('#example{{page.number}}', {
+        title: '{{ page.title }}',
+        subtitle: '{{ page.tagz }}',
+        poster: '{{page.image | relative_url}}',
+        show: {
+            title: '{{ site.podcast.title }}',
+            summary: '{{ site.podcast.summary }}',
+            poster: '{{ site.podcast.art | relative_url }}',
+            link: '{{ site.podcast.link }}'
+        },
+        duration: '{{ page.duration }}',
+        chapters: [
+            {% for chapter in page.chapters %}
+            {%- assign chapter_array = chapter | split: "➖" -%}
+            {%- assign chapter_time = chapter_array[0] | strip -%}
+            {%- assign chapter_title = chapter_array[1] | strip -%}
+            {%- if chapter == page.chapters.last -%}
+            { start:"{{chapter_time}}", title: '{{chapter_title}}'}
+            {%- continue -%}
+            {%- endif -%}
+            { start:"{{chapter_time}}", title: '{{chapter_title}}'},
+            {% endfor %}
+        ],
+        audio: [{
+          url: '{{ page.mp3 | relative_url }}',
+          mimeType: 'audio/mpeg',
+          size: {{ page.length }},
+          title: 'Audio MP3'
+        }],
+        reference: {
+            config: '//podlove-player.surge.sh/fixtures/example.json',
+            share: '//podlove-player.surge.sh/share'
+        },
+        contributors: [{
+          name: 'Даня Меркулов (Братишка)',
+          avatar: '{{'/files/bratishka.jpg' | relative_url }}'
+        }, {
+          name: 'Андрей Горбунов (Волк)',
+          avatar: '{{'/files/volk.jpg' | relative_url }}'
+        }, {
+          name: 'Сергей Русаков (Усталог)',
+          avatar: '{{'/files/ustalog.jpg' | relative_url }}'
+        }]
+    });
+</script>
+
 <!-- Name of the mp3 file in episodes folder -->
-{% if page.episode_file %}
+<!-- {% if page.episode_file %}
 <div class="pcast-player">
   <div class="pcast-player-controls">
     <button class="pcast-play"><i class="fa fa-play"></i><span>Play</span></button>
@@ -26,11 +75,12 @@ layout: default
 </div>
 
 <script  src="{{site.url}}/css/player.js"></script>
-{% endif %}
+{% endif %} -->
 
-Ютубчик: 
+
 
 {% if page.youtube_id %}
+Ютубчик: 
 <div class="video">
     <figure>
         <iframe width="640" height="480" src="//www.youtube.com/embed/{{ page.youtube_id }}" frameborder="0" allowfullscreen></iframe>

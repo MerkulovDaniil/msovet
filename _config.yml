@@ -2,7 +2,7 @@ name: МΣовет
 description: >
     МΣ
 about: >
-    Непопулярный подкаст о науке и всякой херне вокруг
+    Непопулярный подкаст о математических сюжетах и будоражущем наши умы.
 url: "https://msovet.com"
 markdown: kramdown
 highlighter: rouge
@@ -13,3 +13,16 @@ plugins: ['jekyll-paginate', 'jekyll-gist', 'jekyll-feed']
 paginate: 4
 
 disqus_shortname:
+
+author: msovet
+email: trash@merkulov.top
+podcast:
+  title: МΣовет
+  link: https://msovet.com
+  art: /files/logo.png
+  category: Science & Medicine
+  subcategories:
+  - Natural Sciences
+  subtitle: Непопулярный подкаст о математических сюжетах и будоражущем наши умы.
+  summary: >
+    Каждый день в мирах происходят события, требующие серьезного осмысления и рефлексии. Команда исследователей миров созваниваются и базарят за науку и мироздание. Мы - аспиранты по программам различных прикладных математик в университетах Сколково, Сингапура и Лехая.
