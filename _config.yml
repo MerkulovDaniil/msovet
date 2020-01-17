@@ -8,7 +8,7 @@ markdown: kramdown
 highlighter: rouge
 future: true
 
-plugins: ['jekyll-paginate', 'jekyll-gist', 'jekyll-feed']
+plugins: ['jekyll-paginate', 'jekyll-gist']
 
 paginate: 4
 
@@ -20,9 +20,11 @@ podcast:
   title: МΣовет
   link: https://msovet.com
   art: /files/logo.png
-  category: Science & Medicine
+  category: Science
   subcategories:
+  - Mathematics
   - Natural Sciences
+  - Nature
   subtitle: Непопулярный подкаст о математических сюжетах и будоражущем наши умы.
   summary: >
     Каждый день в мирах происходят события, требующие серьезного осмысления и рефлексии. Команда исследователей миров созваниваются и базарят за науку и мироздание. Мы - аспиранты по программам различных прикладных математик в университетах Сколково, Сингапура и Лехая.
