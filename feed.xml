@@ -17,7 +17,7 @@ layout: none
       {% endfor %}
     </itunes:category>
     <itunes:explicit>Yes</itunes:explicit>
-    <itunes:image href="{{ site.podcast.art | relative_url }}"/>
+    <itunes:image href="{{ site.podcast.art | prepend: site.url }}"/>
     <itunes:subtitle>{{ site.podcast.subtitle }}</itunes:subtitle>
     <description>{{ site.podcast.summary }}</description>
     <itunes:summary>{{ site.podcast.summary }}</itunes:summary>
@@ -29,7 +29,7 @@ layout: none
     {% for post in site.categories.podcast %}
     <item>
       <title>{{ post.number }} - {{ post.title }}</title>
-      <itunes:image>{{ post.image | relative_url }}</itunes:image>
+      <itunes:image>{{ post.image | prepend: site.url }}</itunes:image>
       <itunes:explicit>Yes</itunes:explicit>
       <itunes:author>{{ site.author }}</itunes:author>
       <itunes:duration>{{ post.duration }}</itunes:duration>
@@ -37,9 +37,9 @@ layout: none
       <itunes:subtitle></itunes:subtitle>
       <itunes:summary>{{ post.tagz }}</itunes:summary>
       <description><![CDATA[{{ post.tagz | strip_newlines }}]]></description>
-      <guid isPermaLink="true">{{ post.mp3 | relative_url }}</guid>
+      <guid isPermaLink="true">{{ post.mp3 | prepend: site.url }}</guid>
       <category>{{ site.podcast.category }}</category>
-      <enclosure length="{{ post.length }}" url="{{ post.mp3 | relative_url }}" type="audio/mpeg"/>
+      <enclosure length="{{ post.length }}" url="{{ post.mp3 | prepend: site.url }}" type="audio/mpeg"/>
     </item>
     {% endfor %}
   </channel>

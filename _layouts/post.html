@@ -15,11 +15,11 @@ layout: default
     podlovePlayer('#example{{page.number}}', {
         title: '{{ page.title }}',
         subtitle: '{{ page.tagz }}',
-        poster: '{{page.image | relative_url}}',
+        poster: '{{page.image | prepend: site.url}}',
         show: {
             title: '{{ site.podcast.title }}',
             summary: '{{ site.podcast.summary }}',
-            poster: '{{ site.podcast.art | relative_url }}',
+            poster: '{{ site.podcast.art | prepend: site.url }}',
             link: '{{ site.podcast.link }}'
         },
         duration: '{{ page.duration }}',
@@ -36,7 +36,7 @@ layout: default
             {% endfor %}
         ],
         audio: [{
-          url: '{{ page.mp3 | relative_url }}',
+          url: '{{ page.mp3 | prepend: site.url }}',
           mimeType: 'audio/mpeg',
           size: {{ page.length }},
           title: 'Audio MP3'
@@ -47,37 +47,16 @@ layout: default
         },
         contributors: [{
           name: 'Даня Меркулов (Братишка)',
-          avatar: '{{'/files/bratishka.jpg' | relative_url }}'
+          avatar: '{{'/files/bratishka.jpg' | prepend: site.url }}'
         }, {
           name: 'Андрей Горбунов (Волк)',
-          avatar: '{{'/files/volk.jpg' | relative_url }}'
+          avatar: '{{'/files/volk.jpg' | prepend: site.url }}'
         }, {
           name: 'Сергей Русаков (Усталог)',
-          avatar: '{{'/files/ustalog.jpg' | relative_url }}'
+          avatar: '{{'/files/ustalog.jpg' | prepend: site.url }}'
         }]
     });
 </script>
-
-<!-- Name of the mp3 file in episodes folder -->
-<!-- {% if page.episode_file %}
-<div class="pcast-player">
-  <div class="pcast-player-controls">
-    <button class="pcast-play"><i class="fa fa-play"></i><span>Play</span></button>
-    <button class="pcast-pause"><i class="fa fa-pause"></i><span>Pause</span></button>
-    <button class="pcast-rewind"><i class="fa fa-fast-backward"></i><span>Rewind</span></button>
-    <span class="pcast-currenttime pcast-time">00:00</span>
-    <progress class="pcast-progress" value="0"></progress>
-    <span class="pcast-duration pcast-time">00:00</span>
-    <button class="pcast-speed">1x</button>
-    <button class="pcast-mute"><i class="fa fa-volume-up"></i><span>Mute/Unmute</span></button>
-  </div>
-  <audio src="{{site.url}}/audio/episodes/{{page.episode_file}}.mp3"></audio><a class="pcast-download" href="{{site.url}}/audio/episodes/{{page.episode_file}}.mp3" download>Скачать MP3</a>
-</div>
-
-<script  src="{{site.url}}/css/player.js"></script>
-{% endif %} -->
-
-
 
 {% if page.youtube_id %}
 Ютубчик: 
