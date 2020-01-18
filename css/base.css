@@ -610,7 +610,7 @@ code.html span.doctype {
 
 img[src*="#button"] {
   display: inline-block;
-  width: 200px;
+  width: 180px;
   height: auto;
 }
 
