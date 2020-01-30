@@ -5,9 +5,9 @@ title: Подписка
 
 # Сервисы
 
-<!-- [![Listen on Itunes](/files/apple_button.svg#button)](#)
+[![Listen on Itunes](/files/apple_button.svg#button)](https://podcasts.apple.com/ru/podcast/%D0%BC%CF%83%D0%BE%D0%B2%D0%B5%D1%82/id1495401935)
 
-[![Listen on Yandex](/files/yandex_button.svg#button)](#) -->
+[![Listen on Yandex](/files/yandex_button.svg#button)](https://music.yandex.ru/album/9781428)
 
 [![Listen on CastBox](/files/castbox.png#button)](https://castbox.fm/channel/%D0%9C%CE%A3%D0%BE%D0%B2%D0%B5%D1%82-id2572909?country=ru)
 
