@@ -29,7 +29,7 @@ layout: none
     {% for post in site.categories.podcast %}
     <item>
       <title>{{ post.number }} - {{ post.title }}</title>
-      <itunes:image>{{ post.image | prepend: site.url }}</itunes:image>
+      <itunes:image href="{{ post.image | prepend: site.url }}"/>
       <itunes:explicit>Yes</itunes:explicit>
       <itunes:author>{{ site.author }}</itunes:author>
       <itunes:duration>{{ post.duration }}</itunes:duration>
