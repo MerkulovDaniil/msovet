@@ -3,7 +3,7 @@ description: >
     МΣ
 about: >
     Непопулярный подкаст о математических сюжетах и будоражущем наши умы.
-url: "https://msovet.com"
+url: "https://merkulov.top/msovet"
 markdown: kramdown
 highlighter: rouge
 future: true
@@ -18,7 +18,7 @@ author: msovet
 email: trash@merkulov.top
 podcast:
   title: МΣовет
-  link: https://msovet.com
+  link: https://merkulov.top/msovet
   art: /files/logo.png
   category: Science
   subcategories:
